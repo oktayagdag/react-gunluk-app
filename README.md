@@ -68,6 +68,37 @@ Kullanıcı başlık veya metin inputlarında değişiklik yaptığında, onChan
 
 ```
 #### GunlukListele.js
+GunlukListele bileşeni, entries (günlük girişleri), searchTerm (arama terimi) ve onDeleteEntry (silme işlevi) olmak üzere üç adet prop alır.Günlük girişleri, entries prop'u aracılığıyla alınır.Arama terimi, searchTerm prop'u aracılığıyla alınır.entries üzerinde searchTerm filtresi uygulanarak, filtrelenmiş günlük girişleri elde edilir.Her bir günlük girişi için bir "Sil" düğmesi eklenir. Bu düğme onDeleteEntry prop'u aracılığıyla iletilen silme işlevini çağırır.Bu kod bloğu sayesinde günlük girişleri, başlık ve metinleriyle birlikte listelenir. Ayrıca kullanıcı, arama terimini girerek günlükleri filtreleyebilir ve silme işlevi sayesinde istediği günlüğü silebilir.
+```js
+  const GunlukListele = ({ entries, searchTerm, onDeleteEntry}) => {
+  const filteredEntries = entries.filter((entry) =>
+    entry.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div>
+      <h2>Günlükler</h2>
+      {filteredEntries.length > 0 ? (
+        <div className="entries-container">
+          {filteredEntries.map((entry, index) => (
+            <div key={index} className="entry-block">
+              <h3>{entry.title}</h3>
+              <p>{entry.text}</p>
+              <span className="date">{entry.date}</span>
+              <button className="delete-btn"onClick={() => onDeleteEntry(index)}>Sil</button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Günlük bulunamadı.</p>
+      )}
+    </div>
+  );
+};
+
+
+```
+
 
 
 
