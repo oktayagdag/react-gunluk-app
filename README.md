@@ -19,7 +19,7 @@ girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin s
     const newEntry = { ...entry, date: formattedDate };
     setEntries([...entries, newEntry]);
   };
-```js
+```
 
 
 
