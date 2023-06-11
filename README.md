@@ -37,6 +37,15 @@ Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice()
   };
 ```
 
+#### handleSearchTermChange Fonksiyonu
+**handleSearchTermChange** Bu kod bloğu, günlük arama işlevini gerçekleştirir.onChange olayı tetiklendiğinde, e.target.value kullanılarak girilen metin alınır.Günlüklerin listelendiği GunlukListele bileşeni, searchTerm prop'unu alarak günlükleri filtreler ve sadece eşleşen günlükleri görüntüler.
+
+```js
+   const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+```
+
 
 
 
