@@ -14,7 +14,7 @@ Sayfa içerisinde, GunlukGirisler ve GunlukListele bileşenleri kullanılmaktad�
 bileşeni, kullanıcının yeni günlük girişleri eklemesini sağlar. GunlukListele bileşeni ise, günlük 
 girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin silinmesini sağlar.
 
-– #### addEntry Fonksiyonu
+#### addEntry Fonksiyonu
 **addEntry** işlevi, kullanıcının girdiği günlük bilgilerini alır, yeni bir günlük oluşturur ve bu günlüğü entries dizisine ekler.  
 ```js
   const addEntry = (entry) => {
@@ -25,7 +25,7 @@ girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin s
   };
 ```
 
-– #### deleteEntry Fonksiyonu
+#### deleteEntry Fonksiyonu
 **deleteEntry** Kullanıcı bir günlüğü silmek istediğinde, silinecek günlüğün dizindeki index değeri belirtilir.
 Mevcut günlüklerin bir kopyası oluşturulur.
 Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice() yöntemi kullanılarak çıkarılır.
@@ -37,7 +37,7 @@ Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice()
   };
 ```
 
-– #### handleSearchTermChange Fonksiyonu
+#### handleSearchTermChange Fonksiyonu
 **handleSearchTermChange** Bu kod bloğu, günlük arama işlevini gerçekleştirir.onChange olayı tetiklendiğinde, e.target.value kullanılarak girilen metin alınır.Günlüklerin listelendiği GunlukListele bileşeni, searchTerm prop'unu alarak günlükleri filtreler ve sadece eşleşen günlükleri görüntüler.
 
 ```js
@@ -46,15 +46,31 @@ Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice()
   };
 ```
 
-
-
-
-
-
 ### Components Bileşenleri
 
 - src/components/GunlukGirisler.js: Bu bileşen, kullanıcının günlük başlığı ve metnini girebileceği bir form içerir.
 - src/components/GunlukListele.js: Bu bileşen, kullanıcının girdiği günlükleri listeler.
+
+
+#### GunlukGirisler.js
+GünlükGirisler bileşeni, başlık (title) ve metin (text) için ayrı ayrı useState() hook'larını kullanarak state'i tanımlar.
+Kullanıcı başlık veya metin inputlarında değişiklik yaptığında, onChange olayı tetiklenir ve ilgili inputtaki değer state'e yansıtılır.Kullanıcı formu göndermek istediğinde, handleSubmit fonksiyonu çalışır. Bu fonksiyon onSubmit olayıyla tetiklenir.handleSubmit fonksiyonu içinde, addEntry() fonksiyonu çağrılır. Bu fonksiyon, App.js dosyasından prop olarak geçirilen addEntry fonksiyonudur. addEntry fonksiyonuna, kullanıcının girdiği başlık ve metin bilgisi obje olarak iletilir.
+```js
+  const [title, setTitle] = useState('');
+  const [text, setText] = useState('');
+  
+   const handleSubmit = (e) => {
+    e.preventDefault();
+    addEntry({ title, text });
+    setTitle('');
+    setText('');
+  };
+
+```
+#### GunlukListele.js
+
+
+
 
 
 
