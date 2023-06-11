@@ -41,8 +41,8 @@ Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice()
 
 ### Components Bileşenleri
 
-- src/components/GunlukGirisler.js: Bu bileşen, kullanıcının günlük başlığı ve metnini girebileceği bir form içerecek.
-- src/components/GunlukListele.js: Bu bileşen, kullanıcının girdiği günlükleri listeleyecek.
+- src/components/GunlukGirisler.js: Bu bileşen, kullanıcının günlük başlığı ve metnini girebileceği bir form içerir.
+- src/components/GunlukListele.js: Bu bileşen, kullanıcının girdiği günlükleri listeler.
 
 
 
