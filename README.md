@@ -20,6 +20,7 @@ girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin s
     setEntries([...entries, newEntry]);
   };
 ```
+**addEntry** işlevi, kullanıcının girdiği günlük bilgilerini alır, yeni bir günlük oluşturur ve bu günlüğü entries dizisine ekler. 
 
 
 
