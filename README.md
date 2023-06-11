@@ -2,7 +2,7 @@
 
 ![app](https://github.com/oktayagdag/react-gunluk-app/assets/120986651/6e42469d-5d9d-4d98-b4da-2efe12cd1f02)
 
-Günlük Uygulaması, Node.js ve React kullanılarak geliştirilen bir tek sayfalı web uygulamasıdır. Bu uygulama sayesinde günlüklerinizi dijital ortamda tutabilir, yeni günlükler ekleyebilir ve listelenebilir hale getirebilirsiniz.
+Günlük Uygulaması, **Node.js** ve **React** kullanılarak geliştirilen bir tek sayfalı web uygulamasıdır. Bu uygulama sayesinde günlüklerinizi dijital ortamda tutabilir, yeni günlükler ekleyebilir ve listelenebilir hale getirebilirsiniz.
 
 ## Kod Sayfaları Ve İşleyiş
 
