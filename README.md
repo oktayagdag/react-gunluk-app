@@ -14,7 +14,7 @@ Sayfa içerisinde, GunlukGirisler ve GunlukListele bileşenleri kullanılmaktad�
 bileşeni, kullanıcının yeni günlük girişleri eklemesini sağlar. GunlukListele bileşeni ise, günlük 
 girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin silinmesini sağlar.
 
-#### addEntry Fonksiyonu
+– #### addEntry Fonksiyonu
 **addEntry** işlevi, kullanıcının girdiği günlük bilgilerini alır, yeni bir günlük oluşturur ve bu günlüğü entries dizisine ekler.  
 ```js
   const addEntry = (entry) => {
@@ -25,7 +25,7 @@ girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin s
   };
 ```
 
-#### deleteEntry Fonksiyonu
+– #### deleteEntry Fonksiyonu
 **deleteEntry** Kullanıcı bir günlüğü silmek istediğinde, silinecek günlüğün dizindeki index değeri belirtilir.
 Mevcut günlüklerin bir kopyası oluşturulur.
 Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice() yöntemi kullanılarak çıkarılır.
@@ -37,7 +37,7 @@ Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice()
   };
 ```
 
-#### handleSearchTermChange Fonksiyonu
+– #### handleSearchTermChange Fonksiyonu
 **handleSearchTermChange** Bu kod bloğu, günlük arama işlevini gerçekleştirir.onChange olayı tetiklendiğinde, e.target.value kullanılarak girilen metin alınır.Günlüklerin listelendiği GunlukListele bileşeni, searchTerm prop'unu alarak günlükleri filtreler ve sadece eşleşen günlükleri görüntüler.
 
 ```js
