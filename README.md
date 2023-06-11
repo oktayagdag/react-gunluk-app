@@ -10,8 +10,9 @@ değiştikçe güncellemeleri sağlar.
 Sayfa içerisinde, GunlukGirisler ve GunlukListele bileşenleri kullanılmaktadır. GunlukGirisler 
 bileşeni, kullanıcının yeni günlük girişleri eklemesini sağlar. GunlukListele bileşeni ise, günlük 
 girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin silinmesini sağlar.
-#### addEntry Fonksiyonu
 
+#### addEntry Fonksiyonu
+**addEntry** işlevi, kullanıcının girdiği günlük bilgilerini alır, yeni bir günlük oluşturur ve bu günlüğü entries dizisine ekler.  
 ```js
   const addEntry = (entry) => {
     const currentDate = new Date();
@@ -20,7 +21,20 @@ girişlerini listeleyerek arama işlevselliği sunar ve günlük girişlerinin s
     setEntries([...entries, newEntry]);
   };
 ```
-**addEntry** işlevi, kullanıcının girdiği günlük bilgilerini alır, yeni bir günlük oluşturur ve bu günlüğü entries dizisine ekler. 
+
+#### deleteEntry Fonksiyonu
+**deleteEntry** Kullanıcı bir günlüğü silmek istediğinde, silinecek günlüğün dizindeki index değeri belirtilir.
+Mevcut günlüklerin bir kopyası oluşturulur.
+Kopya günlükler dizisinden, belirtilen index değerine sahip günlük splice() yöntemi kullanılarak çıkarılır.
+```js
+   const deleteEntry = (index) => {
+    const updatedEntries = [...entries];
+    updatedEntries.splice(index, 1);
+    setEntries(updatedEntries);
+  };
+```
+
+
 
 
 
